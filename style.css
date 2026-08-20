@@ -77,3 +77,62 @@ footer { display: flex; justify-content: space-between; padding: 2rem 5vw; backg
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+
+.track-list {
+  margin-left: 25%;
+  border-top: 1px solid var(--line);
+}
+
+.track {
+  display: grid;
+  grid-template-columns: 5rem 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: padding 0.2s, background 0.2s;
+}
+
+.track-number {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}
+
+.track-title {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  letter-spacing: -0.03em;
+}
+
+.track-action {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.track:hover {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: var(--accent);
+}
+
+.track:hover .track-number {
+  color: var(--ink);
+}
+
+.soundcloud-profile-link {
+  display: inline-block;
+  margin-top: 2rem;
+  text-underline-offset: 0.3rem;
+}
+
+@media (max-width: 800px) {
+  .track-list {
+    margin-left: 0;
+  }
+
+  .track {
+    grid-template-columns: 2.5rem 1fr auto;
+  }
+}
