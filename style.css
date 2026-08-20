@@ -3,8 +3,8 @@
   --paper: #f1efe8;
   --accent: #66745b;
   --line: rgba(23, 23, 20, .25);
-  --mono: "Avenir Next", "Century Gothic", Arial, sans-serif;
-  --sans: "Avenir Next", "Century Gothic", Arial, sans-serif;
+  --mono: "Segoe UI", Arial, Helvetica, sans-serif;
+  --sans: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -30,9 +30,8 @@ nav a:hover, nav a:focus-visible { color: var(--accent); }
 .hero-note { margin: 0; color: #5d6258; font-size: .9rem; letter-spacing: .06em; }
 
 .section { padding: 7rem 5vw; border-top: 1px solid var(--line); }
-.section-heading { display: grid; grid-template-columns: minmax(5rem, 1fr) 3fr; align-items: start; margin-bottom: 4rem; }
+.section-heading { margin: 0 0 4rem 25%; }
 .section-heading h2 { margin: 0; font-size: clamp(3rem, 7vw, 7rem); font-weight: 500; letter-spacing: -.06em; line-height: .9; }
-.section-number { margin: -.1rem 0 0; color: var(--accent); font-size: 2rem; line-height: 1; }
 
 .track-list { margin-left: 25%; border-top: 1px solid var(--line); }
 .track { display: grid; grid-template-columns: 5rem 1fr auto; align-items: center; gap: 1rem; padding: 1.6rem 0; border-bottom: 1px solid var(--line); text-decoration: none; }
@@ -57,7 +56,6 @@ nav a:hover, nav a:focus-visible { color: var(--accent); }
 .about-copy p { max-width: 48rem; font-size: 1.1rem; line-height: 1.75; }
 .about-copy .lead { max-width: none; font-size: clamp(2rem, 4vw, 4rem); line-height: 1.15; letter-spacing: -.04em; }
 .contact-section { background: var(--accent); color: #f5f3ed; }
-.contact-section .section-number { color: var(--ink); }
 .contact-copy > p { font-size: clamp(1.8rem, 4vw, 4rem); }
 .contact-links { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 3rem; }
 .contact-links a { font-size: 1.3rem; text-underline-offset: .4rem; }
@@ -72,7 +70,7 @@ footer { display: flex; justify-content: space-between; padding: 2rem 5vw; backg
   nav a { padding: 1rem; border-top: 1px solid var(--line); }
   .hero { padding-inline: 1rem; }
   .section { padding: 5rem 1rem; }
-  .section-heading { grid-template-columns: 3rem 1fr; margin-bottom: 3rem; }
+  .section-heading { margin: 0 0 3rem; }
   .track-list, .project-grid, .about-image, .about-copy, .contact-copy { margin-left: 0; }
   .project-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 18rem; }
