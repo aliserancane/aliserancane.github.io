@@ -323,11 +323,11 @@ nav a:focus-visible {
 }
 
 .about-copy .lead {
-  max-width: none;
+  max-width: 48rem;
   color: var(--ink);
-  font-size: clamp(2rem, 4vw, 4rem);
-  letter-spacing: -0.045em;
-  line-height: 1.15;
+  font-size: 1.25rem;
+  letter-spacing: -0.015em;
+  line-height: 1.7;
 }
 
 /* Contact */
