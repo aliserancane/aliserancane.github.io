@@ -472,4 +472,52 @@ footer a:hover { color: var(--accent); }
   .works-body .work-bandcamp {
     max-width: 100%;
   }
+  
+/* Collapse as a Form of Control */
+#collapse .work-video {
+  width: 100%;
+  max-width: 1100px;
+  aspect-ratio: 16 / 9;
+  margin: 2rem 0 3rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+#collapse .work-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#collapse .work-description {
+  max-width: 52rem;
+  margin-top: 2rem;
+}
+
+#collapse .work-description p {
+  margin: 0 0 1.4rem;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+#collapse .work-description p:nth-child(2) {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+/* Mobile layout */
+@media (max-width: 800px) {
+  #collapse .work-video {
+    margin: 1.5rem 0 2rem;
+  }
+
+  #collapse .work-description p {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+}
+
 }
