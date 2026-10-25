@@ -870,3 +870,132 @@ footer a:hover {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* ========================================
+   WORKS PAGE
+   ======================================== */
+
+.works-page > .section:first-child {
+  padding-top: 10rem;
+}
+
+.works-page .section-heading .eyebrow {
+  margin-bottom: 1.5rem;
+}
+
+.works-page .section-heading h1 {
+  margin: 0;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.95;
+}
+
+.works-page .project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2.5rem;
+}
+
+.works-page .work-page-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1.8rem 0;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.works-page .work-page-link h3 {
+  transition: color 180ms ease;
+}
+
+.works-page .work-page-link:hover h3 {
+  color: var(--accent);
+}
+
+.works-page .work-page-link p:not(.project-type) {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Individual work sections */
+
+.work-detail {
+  scroll-margin-top: 2rem;
+}
+
+.work-detail > h2 {
+  max-width: 60rem;
+  margin: 1rem 0;
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+}
+
+.work-subtitle {
+  margin: 1rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.work-media-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45vh;
+  margin: 2.5rem 0;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.work-description,
+.work-materials {
+  max-width: 48rem;
+  margin-left: 25%;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.work-materials {
+  min-height: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+/* Responsive Works page */
+
+@media (max-width: 800px) {
+  .works-page > .section:first-child {
+    padding-top: 7rem;
+  }
+
+  .works-page .project-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .work-detail > h2 {
+    font-size: clamp(2.4rem, 10vw, 4rem);
+  }
+
+  .work-media-placeholder {
+    min-height: 30vh;
+  }
+
+  .work-description,
+  .work-materials {
+    margin-left: 0;
+  }
+}
+
