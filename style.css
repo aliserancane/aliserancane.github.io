@@ -443,3 +443,19 @@ footer a:hover { color: var(--accent); }
   }
 }
 
+
+
+/* Prevent the fixed header from covering work titles */
+.works-body .works-index {
+  padding-top: 2rem;
+}
+
+.works-body .work-detail {
+  scroll-margin-top: 90px;
+}
+
+/* Keep the navigation above the page content */
+.works-body .site-header {
+  z-index: 1000;
+}
+
