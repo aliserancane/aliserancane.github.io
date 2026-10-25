@@ -1,35 +1,16 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta
-    name="description"
-    content="Selected compositions, electronic music and interdisciplinary works by Alise Rancāne."
-  >
-
+  <meta name="description" content="Selected compositions, electronic music and interdisciplinary works by Alise Rancāne.">
   <title>Works — Alise Rancāne</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-
-  <!-- Navigation -->
-
+<body class="works-body">
   <header class="site-header">
     <a class="name-link" href="index.html">Alise Rancāne</a>
-
-    <button
-      class="menu-button"
-      type="button"
-      aria-expanded="false"
-      aria-controls="navigation"
-    >
-      Menu
-    </button>
-
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
     <nav id="navigation" aria-label="Main navigation">
       <a href="index.html#music">Music</a>
       <a href="index.html#code">Code</a>
@@ -39,192 +20,76 @@
     </nav>
   </header>
 
-  <main class="works-page">
-
-    <!-- Page introduction -->
-
-    <section class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Composition · Electronic music · Interdisciplinary practice</p>
-        <h1>Works</h1>
-      </div>
-
-      <!-- Works index -->
-
-      <div class="project-grid">
-
-        <a class="project-card work-page-link"
-           href="#blue-moon-station">
-          <p class="project-type">01 / Ensemble</p>
-          <h3>Blue Moon Station</h3>
-          <p>Music for five musicians and computers.</p>
-        </a>
-
-        <a class="project-card work-page-link"
-           href="#collapse">
-          <p class="project-type">02 / Performance</p>
-          <h3>Collapse as a Form of Control</h3>
-          <p>Performance work.</p>
-        </a>
-
-        <a class="project-card work-page-link"
-           href="#ars-magna">
-          <p class="project-type">03 / Voice and electronics</p>
-          <h3>Ars Magna</h3>
-          <p>Music for voice and electronics.</p>
-        </a>
-
-        <a class="project-card work-page-link"
-           href="#hidden-layers-of-charlotte">
-          <p class="project-type">04 / Electronic music</p>
-          <h3>Hidden Layers of Charlotte</h3>
-          <p>Electronic piece.</p>
-        </a>
-
-        <a class="project-card work-page-link"
-           href="#music-for-organ">
-          <p class="project-type">05 / Composition</p>
-          <h3>Music for Organ</h3>
-          <p>Composition for organ.</p>
-        </a>
-
-        <a class="project-card work-page-link"
-           href="#azazazazazaza">
-          <p class="project-type">06 / Live coding</p>
-          <h3>azazazazazaza</h3>
-          <p>Live-coding performance.</p>
-        </a>
-
-      </div>
+  <main class="works-page" id="top">
+    <section class="works-intro">
+      <p class="eyebrow">Composition · Electronic music · Interdisciplinary practice</p>
+      <h1>Works</h1>
+      <p class="works-intro-copy">Selected compositions, performances and projects.</p>
     </section>
 
-    <!-- Individual work: Blue Moon Station -->
-
-    <section id="blue-moon-station" class="section work-detail">
-      <p class="project-type">01 / Ensemble</p>
-      <h2>Blue Moon Station</h2>
-      <p class="work-subtitle">Music for five musicians and computers</p>
-
-      <div class="work-media-placeholder">
-        <span>Video / Images / Audio</span>
-      </div>
-
-      <div class="work-description">
-        <!-- Add your description, credits and year here. -->
-      </div>
-
-      <div class="work-materials">
-        <!-- Add documentation, scores or external links here. -->
-      </div>
+    <section class="works-index" aria-label="Works list">
+      <a class="works-row" href="#blue-moon-station">
+        <span class="work-index">01</span><span class="works-row-main"><span class="works-row-title">Blue Moon Station</span><span class="works-row-meta">Music for six musicians and computers</span></span><span class="works-row-type">Ensemble</span>
+      </a>
+      <a class="works-row" href="#collapse">
+        <span class="work-index">02</span><span class="works-row-main"><span class="works-row-title">Collapse as a Form of Control</span><span class="works-row-meta">Performance</span></span><span class="works-row-type">Performance</span>
+      </a>
+      <a class="works-row" href="#ars-magna">
+        <span class="work-index">03</span><span class="works-row-main"><span class="works-row-title">Ars Magna</span><span class="works-row-meta">Music for voice and electronics</span></span><span class="works-row-type">Voice / electronics</span>
+      </a>
+      <a class="works-row" href="#hidden-layers-of-charlotte">
+        <span class="work-index">04</span><span class="works-row-main"><span class="works-row-title">Hidden Layers of Charlotte</span><span class="works-row-meta">Electronic piece</span></span><span class="works-row-type">Electronic music</span>
+      </a>
+      <a class="works-row" href="#music-for-organ">
+        <span class="work-index">05</span><span class="works-row-main"><span class="works-row-title">Music for Organ</span><span class="works-row-meta">Composition</span></span><span class="works-row-type">Organ</span>
+      </a>
+      <a class="works-row" href="#azazazazazaza">
+        <span class="work-index">06</span><span class="works-row-main"><span class="works-row-title">azazazazazaza</span><span class="works-row-meta">Live-coding performance</span></span><span class="works-row-type">Live coding</span>
+      </a>
     </section>
 
-    <!-- Individual work: Collapse as a Form of Control -->
-
-    <section id="collapse" class="section work-detail">
-      <p class="project-type">02 / Performance</p>
-      <h2>Collapse as a Form of Control</h2>
-
-      <div class="work-media-placeholder">
-        <span>Video / Images / Audio</span>
-      </div>
-
-      <div class="work-description">
-        <!-- Add your description, credits and year here. -->
-      </div>
-
-      <div class="work-materials">
-        <!-- Add documentation and external links here. -->
-      </div>
+    <section id="blue-moon-station" class="work-detail">
+      <p class="project-type">01 / Ensemble</p><h2>Blue Moon Station</h2>
+      <p class="work-subtitle">Music for six musicians and computers</p>
+      <div class="work-placeholder">Media, recording or score can be added here</div>
+      <p class="placeholder-note">Project description and credits to be added.</p>
     </section>
-
-    <!-- Individual work: Ars Magna -->
-
-    <section id="ars-magna" class="section work-detail">
-      <p class="project-type">03 / Voice and electronics</p>
-      <h2>Ars Magna</h2>
+    <section id="collapse" class="work-detail">
+      <p class="project-type">02 / Performance</p><h2>Collapse as a Form of Control</h2>
+      <p class="work-subtitle">Performance work</p>
+      <div class="work-placeholder">Media, images or video can be added here</div>
+      <p class="placeholder-note">Project description and credits to be added.</p>
+    </section>
+    <section id="ars-magna" class="work-detail">
+      <p class="project-type">03 / Voice and electronics</p><h2>Ars Magna</h2>
       <p class="work-subtitle">Music for voice and electronics</p>
-
-      <div class="work-media-placeholder">
-        <span>Video / Images / Audio</span>
-      </div>
-
-      <div class="work-description">
-        <!-- Add your description, credits and year here. -->
-      </div>
-
-      <div class="work-materials">
-        <!-- Add documentation, scores or external links here. -->
-      </div>
+      <div class="work-placeholder">Audio, images or score can be added here</div>
+      <p class="placeholder-note">Project description and credits to be added.</p>
     </section>
-
-    <!-- Individual work: Hidden Layers of Charlotte -->
-
-    <section id="hidden-layers-of-charlotte" class="section work-detail">
-      <p class="project-type">04 / Electronic music</p>
-      <h2>Hidden Layers of Charlotte</h2>
+    <section id="hidden-layers-of-charlotte" class="work-detail">
+      <p class="project-type">04 / Electronic music</p><h2>Hidden Layers of Charlotte</h2>
       <p class="work-subtitle">Electronic piece</p>
-
-      <div class="work-media-placeholder">
-        <span>Video / Images / Audio</span>
-      </div>
-
-      <div class="work-description">
-        <!-- Add your description, credits and year here. -->
-      </div>
-
-      <div class="work-materials">
-        <!-- Add documentation and external links here. -->
-      </div>
+      <div class="work-placeholder">Audio or images can be added here</div>
+      <p class="placeholder-note">Project description and credits to be added.</p>
     </section>
-
-    <!-- Individual work: Music for Organ -->
-
-    <section id="music-for-organ" class="section work-detail">
-      <p class="project-type">05 / Composition</p>
-      <h2>Music for Organ</h2>
-
-      <div class="work-media-placeholder">
-        <span>Video / Images / Audio / Score</span>
-      </div>
-
-      <div class="work-description">
-        <!-- Add your description, credits and year here. -->
-      </div>
-
-      <div class="work-materials">
-        <!-- Add downloadable score or external links here. -->
-      </div>
+    <section id="music-for-organ" class="work-detail">
+      <p class="project-type">05 / Composition</p><h2>Music for Organ</h2>
+      <p class="work-subtitle">Composition for organ</p>
+      <div class="work-placeholder">Recording or score can be added here</div>
+      <p class="placeholder-note">Project description and credits to be added.</p>
     </section>
-
-    <!-- Individual work: azazazazazaza -->
-
-    <section id="azazazazazaza" class="section work-detail">
-      <p class="project-type">06 / Live coding</p>
-      <h2>azazazazazaza</h2>
+    <section id="azazazazazaza" class="work-detail">
+      <p class="project-type">06 / Live coding</p><h2>azazazazazaza</h2>
       <p class="work-subtitle">Live-coding performance</p>
-
-      <div class="work-media-placeholder">
-        <span>Video / Images / Audio</span>
-      </div>
-
-      <div class="work-description">
-        <!-- Add your description, credits and year here. -->
-      </div>
-
-      <div class="work-materials">
-        <!-- Add code, documentation or external links here. -->
-      </div>
+      <div class="work-placeholder">Video, images or code can be added here</div>
+      <p class="placeholder-note">Project description and credits to be added.</p>
     </section>
-
   </main>
-
-  <!-- Footer -->
 
   <footer>
     <p>© <span id="year"></span> Alise Rancāne</p>
     <a href="index.html">Back to home ↑</a>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
