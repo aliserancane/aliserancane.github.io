@@ -546,4 +546,23 @@ footer a:hover { color: var(--accent); }
     margin: 1.5rem 0 2rem;
   }
 }
+/* Hide the homepage works list until hover */
+
+.hero-works.works-hover-panel {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* Reveal the list when the works area is hovered */
+.hero:has(.hero-works.works-hover-panel:hover)
+  .hero-works.works-hover-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
