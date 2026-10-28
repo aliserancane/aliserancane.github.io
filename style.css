@@ -209,7 +209,8 @@ nav a[aria-current="page"] { color: var(--accent); }
 }
 
 .hero-works:hover .hero-works-list,
-.hero-works:focus-within .hero-works-list {
+.hero-works:focus-within .hero-works-list,
+.hero-works.is-open .hero-works-list {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
