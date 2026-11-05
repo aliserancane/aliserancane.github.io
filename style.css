@@ -111,7 +111,7 @@ nav a[aria-current="page"] { color: var(--accent); }
 .hero {
   position: relative;
   display: flex;
-  min-height: min(48rem, 92svh);
+  min-height: min(32rem, 68svh);
   padding: 4.2rem var(--gutter) 1.5rem;
   overflow: hidden;
   isolation: isolate;
