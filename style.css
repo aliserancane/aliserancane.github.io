@@ -1,118 +1,100 @@
 
     
   
-    max-width: 100%;
-    height: auto;
-    max-height: 48svh;
-    object-fit: contain;
-    object-position: center;
-    transform: none;
-  }
+/* ALISE RANCĀNE — PORTFOLIO
 
-  .hero::before {
-    left: -12%;
-    top: 8%;
-    width: 124%;
-    height: 85%;
-    filter: blur(45px);
-  }
+*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --ink: #e8f0ee;
+  --paper: #050b0a;
+  --panel: #0b1715;
+  --panel-raised: rgba(7, 17, 16, 0.97);
+  --accent: #c2e78b;
+  --accent-dark: #07120d;
+  --muted: #a9b9b5;
+  --line: rgba(173, 211, 215, 0.28);
+  --line-strong: rgba(183, 226, 225, 0.48);
+  --sans: "Space Grotesk", "Segoe UI", Arial, sans-serif;
+  --mono: "Space Mono", "Courier New", monospace;
+  --gutter: clamp(1rem, 5vw, 5rem);
+  --content-offset: 25%;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-/* Smaller phones */
-@media (max-width: 520px) {
-  .hero {
-    padding: 4.2rem 0.65rem 1.2rem;
-  }
+* { box-sizing: border-box; }
 
-  .hero-image {
-    max-height: 44svh;
-  }
-
-  .hero::before {
-    filter: blur(38px);
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
-/* Works navigation hover panel */
-.hero-works {
-  position: fixed;
-  z-index: 200;
-  top: 3.5rem;
-  right: 2.8vw;
-  width: min(27rem, calc(100vw - 2rem));
-  padding: 1.2rem 1.5rem;
-  background: rgba(5, 11, 10, 0.96);
-  border: 1px solid var(--line);
-  backdrop-filter: blur(18px);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition:
-    opacity 220ms ease,
-    transform 220ms ease,
-    visibility 220ms ease;
-  pointer-events: none;
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 78% 5%, rgba(125, 163, 93, 0.075), transparent 34rem),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.hero-works.is-open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
+img, video, iframe { display: block; max-width: 100%; }
+a { color: inherit; }
+button { color: inherit; font: inherit; }
+::selection { background: var(--accent); color: var(--accent-dark); }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 4px;
 }
 
-.hero-works-list {
+/* Navigation */
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 100;
   display: flex;
-  flex-direction: column;
-}
-
-.hero-work {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.2rem;
-  padding: 0.85rem 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 3.2rem;
+  padding: 0.85rem 2.8vw;
   border-bottom: 1px solid var(--line);
-  text-decoration: none;
-  transition: padding-left 180ms ease;
+  background: rgba(8, 10, 9, 0.78);
+  backdrop-filter: blur(14px);
 }
 
-.hero-work:hover {
-  padding-left: 0.4rem;
-}
-
-.work-index {
+.name-link {
   color: var(--accent);
   font-family: var(--mono);
   font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.work-details {
+nav {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
 }
 
-.work-title {
+nav a {
   color: var(--ink);
-  font-size: 0.9rem;
-}
-
-.work-meta {
-  color: var(--muted);
   font-family: var(--mono);
-  font-size: 0.65rem;
-}
-
-.view-all-works {
-  display: inline-block;
-  margin-top: 1rem;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
   text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease;
 }
 
-.view-all-works:hover {
-  color: var(--ink);
-}
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] { color: var(--accent); }
 
