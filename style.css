@@ -147,7 +147,7 @@ a:focus-visible, button:focus-visible { outline: 1px solid var(--accent); outlin
   text-transform: uppercase;
 }
 
-/* Hero image: contained, never cropped or stretched. */
+
 .hero {
   position: relative;
   display: grid;
@@ -172,7 +172,7 @@ a:focus-visible, button:focus-visible { outline: 1px solid var(--accent); outlin
 }
 .hero-image {
   display: block;
-  width: 100%;
+  width: 120%;
   height: auto;
   max-width: none;
   object-fit: contain;
