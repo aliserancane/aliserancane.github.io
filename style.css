@@ -111,15 +111,14 @@ nav a[aria-current="page"] { color: var(--accent); }
 .hero {
   position: relative;
   min-height: 0;
-  height: auto;
-  padding: 3.2rem 0 0;
+  padding: 3.2rem 0 2rem 3%;
   overflow: hidden;
   isolation: isolate;
   background:
-    radial-gradient(ellipse at 78% 55%,
-      rgba(32, 119, 151, 0.22), transparent 38%),
-    radial-gradient(ellipse at 18% 80%,
-      rgba(174, 54, 137, 0.13), transparent 35%),
+    radial-gradient(ellipse at 75% 50%,
+      rgba(32, 119, 151, 0.20), transparent 38%),
+    radial-gradient(ellipse at 20% 80%,
+      rgba(174, 54, 137, 0.12), transparent 35%),
     #030908;
 }
 
@@ -127,10 +126,12 @@ nav a[aria-current="page"] { color: var(--accent); }
   position: relative;
   z-index: 1;
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: 78%;
+  max-height: 65vh;
   object-fit: contain;
-  object-position: center;
+  object-position: left center;
   transform: translateX(-1%);
 }
 
@@ -1131,4 +1132,90 @@ footer {
   .track-action { font-size: 0.62rem; }
 
   .section-heading h2 { font-size: 1rem; }
+}
+
+/* Works navigation hover panel */
+
+.hero-works {
+  position: fixed;
+  z-index: 200;
+  top: 3.5rem;
+  right: 2.8vw;
+  width: min(27rem, calc(100vw - 2rem));
+  padding: 1.2rem 1.5rem;
+  background: rgba(5, 11, 10, 0.96);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    visibility 220ms ease;
+
+  pointer-events: none;
+}
+
+.hero-works.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.hero-works-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-work {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: padding-left 180ms ease;
+}
+
+.hero-work:hover {
+  padding-left: 0.4rem;
+}
+
+.work-index {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
+
+.work-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.work-title {
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.work-meta {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+}
+
+.view-all-works {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.view-all-works:hover {
+  color: var(--ink);
 }
