@@ -171,16 +171,11 @@ a:focus-visible, button:focus-visible { outline: 1px solid var(--accent); outlin
   pointer-events: none;
 }
 .hero-image {
-  position: relative;
-  z-index: 1;
-  width: auto;
+  display: block;
+  width: 100%;
   height: auto;
-  max-width: min(100%, 1040px);
-  max-height: 66vh;
+  max-width: none;
   object-fit: contain;
-  object-position: center;
-  margin: 0 auto;
-  box-shadow: 0 0 70px rgba(45, 131, 164, 0.12);
 }
 
 /* Main sections */
