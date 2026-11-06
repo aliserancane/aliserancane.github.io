@@ -1,0 +1,295 @@
+/* WORKS PAGE — styles scoped to works.html */
+.works-body {
+  --works-width: 1180px;
+}
+
+.works-body .works-main {
+  width: min(var(--works-width), calc(100% - 2 * var(--gutter)));
+  margin: 0 auto;
+}
+
+.works-body .works-index {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(4rem, 7vw, 6.5rem);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.works-body .works-index-heading {
+  grid-column: 1 / -1;
+  padding: 0 0 1.6rem;
+}
+
+.works-body .works-index-heading .project-type {
+  margin: 0 0 0.7rem;
+}
+
+.works-body .works-index-heading h1 {
+  margin: 0 0 0.45rem;
+  color: var(--ink);
+  font: 500 clamp(2rem, 4vw, 3.4rem)/1.1 var(--sans);
+  letter-spacing: -0.045em;
+}
+
+.works-body .works-index-heading > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.works-body .works-row {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 0;
+  padding: 1.15rem 1rem 1.15rem 0.2rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 160ms ease, padding 160ms ease;
+}
+
+.works-body .works-row:nth-of-type(odd) {
+  border-right: 1px solid var(--line);
+  padding-right: 1.2rem;
+}
+
+.works-body .works-row:nth-of-type(even) {
+  padding-left: 1.2rem;
+}
+
+.works-body .works-row:hover,
+.works-body .works-row:focus-visible {
+  padding-left: 0.65rem;
+  background: rgba(194, 231, 139, 0.045);
+}
+
+.works-body .work-index {
+  color: var(--blue);
+  font: 0.68rem var(--mono);
+}
+
+.works-body .works-row-main {
+  display: grid;
+  gap: 0.28rem;
+  min-width: 0;
+}
+
+.works-body .works-row-title {
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.works-body .works-row-meta {
+  color: var(--muted);
+  font-size: 0.77rem;
+  line-height: 1.45;
+}
+
+.works-body .works-row-type {
+  color: var(--accent);
+  font: 0.58rem var(--mono);
+  letter-spacing: 0.04em;
+  text-align: right;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.works-body .work-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  grid-template-areas:
+    "type type"
+    "title title"
+    "subtitle subtitle"
+    "media description";
+  column-gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  margin: 0 0 clamp(4.5rem, 8vw, 7rem);
+  padding: clamp(2rem, 4vw, 3.5rem) 0 0;
+  border-top: 1px solid var(--line-strong);
+  scroll-margin-top: 5rem;
+}
+
+.works-body .work-detail > .project-type {
+  grid-area: type;
+  margin: 0 0 0.8rem;
+  color: var(--blue);
+  font: 0.65rem var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.works-body .work-detail > h2 {
+  grid-area: title;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+  font: 500 clamp(1.65rem, 3vw, 2.5rem)/1.15 var(--sans);
+  letter-spacing: -0.035em;
+}
+
+.works-body .work-detail > .work-subtitle {
+  grid-area: subtitle;
+  margin: 0 0 1.8rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.works-body .work-video,
+.works-body .work-bandcamp,
+.works-body .work-soundcloud {
+  grid-area: media;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--line);
+}
+
+.works-body .work-video {
+  aspect-ratio: 16 / 9;
+}
+
+.works-body .work-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.works-body .work-bandcamp iframe,
+.works-body .work-soundcloud iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.works-body .work-bandcamp iframe {
+  height: 120px;
+}
+
+.works-body .work-soundcloud iframe {
+  height: 166px;
+}
+
+.works-body .work-description {
+  grid-area: description;
+  width: 100%;
+  max-width: 62ch;
+  min-width: 0;
+}
+
+.works-body .work-description p {
+  margin: 0 0 1.05rem;
+  color: var(--muted);
+  font-size: 0.91rem;
+  line-height: 1.8;
+}
+
+.works-body .work-description em {
+  color: var(--ink);
+}
+
+.works-body footer {
+  width: min(var(--works-width), calc(100% - 2 * var(--gutter)));
+  margin: 0 auto;
+}
+
+/* Projects without a long description use a narrower media column. */
+.works-body #hidden-layers-of-charlotte,
+.works-body #music-for-organ {
+  grid-template-columns: minmax(0, 900px);
+  grid-template-areas:
+    "type"
+    "title"
+    "subtitle"
+    "media"
+    "description";
+}
+
+.works-body #hidden-layers-of-charlotte .work-soundcloud,
+.works-body #music-for-organ .work-video {
+  width: min(100%, 900px);
+}
+
+@media (max-width: 760px) {
+  .works-body .works-main,
+  .works-body footer {
+    width: calc(100% - 2rem);
+  }
+
+  .works-body .works-index {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .works-body .works-row,
+  .works-body .works-row:nth-of-type(odd),
+  .works-body .works-row:nth-of-type(even) {
+    grid-template-columns: 2rem minmax(0, 1fr) auto;
+    padding: 1rem 0.2rem;
+    border-right: 0;
+  }
+
+  .works-body .works-row-title {
+    font-size: 0.92rem;
+  }
+
+  .works-body .works-row-type {
+    max-width: 7.5rem;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  .works-body .work-detail,
+  .works-body #hidden-layers-of-charlotte,
+  .works-body #music-for-organ {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "type"
+      "title"
+      "subtitle"
+      "media"
+      "description";
+    row-gap: 0;
+    margin-bottom: 3.8rem;
+    padding-top: 1.8rem;
+  }
+
+  .works-body .work-detail > .work-subtitle {
+    margin-bottom: 1.25rem;
+  }
+
+  .works-body .work-description {
+    margin-top: 1.25rem;
+  }
+
+  .works-body .work-description p {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 480px) {
+  .works-body .works-row {
+    grid-template-columns: 1.6rem minmax(0, 1fr);
+    gap: 0.55rem;
+  }
+
+  .works-body .works-row-type {
+    grid-column: 2;
+    text-align: left;
+    max-width: none;
+  }
+
+  .works-body .works-index-heading h1 {
+    font-size: 2.2rem;
+  }
+}
